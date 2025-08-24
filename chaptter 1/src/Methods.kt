@@ -1,4 +1,4 @@
 fun main()
 {
-    val name = "Farid "
+    val name = "Farid"
 }

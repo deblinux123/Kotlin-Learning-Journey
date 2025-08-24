@@ -11,4 +11,42 @@ fun main() {
         // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
         println("i = $i")
     }
+
+    // variable
+    val PI: Double = 3.14
+    var age: Int = 24
+    var myName = "Farid"
+
+
+    println(PI)
+    println(age)
+    println(myName);
+
+    val language: String = "Kotlin"
+    println("I love $language")
+
+    val a: Int = 10;
+//    a = 12 cant change
+
+    var b: Float = 12.3F
+
+    b = 12.4F
+
+    println("The new value for b is $b")
+
+    val country: String = "Iran"
+
+    println("I live in $country")
+
+
+    // Data type in kotlin
+
+    val myAge: Int = 23
+    val userName: String = "Mu UserName"
+    val isStudent: Boolean = true
+
+    println(isStudent)
+    println(userName)
+    println(myAge)
+
 }
