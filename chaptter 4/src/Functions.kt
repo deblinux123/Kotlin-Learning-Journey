@@ -4,7 +4,7 @@ fun main()
     sum(12, 3)
     sum(12, 3, 4)
     printMessageWithPrefix(prefix = "Log", message = "Hello")
-    add()
+    add(12,12)
     add(b = 10, a = 10)
     println(multiplication(12, 2))
 }
