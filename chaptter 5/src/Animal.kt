@@ -23,9 +23,21 @@ class Cat(name: String, age: Int): Animal(name, age)
 }
 fun main()
 {
-    val dog = Dog("jack", 2)
-    val cat = Cat("blue", 3)
+//    val dog = Dog("jack", 2)
+//    val cat = Cat("blue", 3)
+//
+//    dog.sound()
+//    cat.sound()
 
-    dog.sound()
-    cat.sound()
+    // polymorphism
+
+    val animals: List<Animal> = listOf(
+        Dog("jack", 1),
+        Cat("blue", 2)
+    )
+
+    for (animal in animals)
+    {
+        animal.sound()
+    }
 }
