@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="chaptter6" target="21" />
+      <module name="chaptter6.main" target="21" />
+      <module name="chaptter6.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
