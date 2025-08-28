@@ -15,4 +15,5 @@ fun main()
     paymentMethod.initiatePayment(100.0)
 
     println("Payment is by ${paymentMethod.paymentType}")
+    println("Hello")
 }
