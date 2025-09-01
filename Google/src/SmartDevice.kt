@@ -3,6 +3,7 @@ import kotlin.io.path.fileVisitor
 open class SmartDevice(val name: String, val category: String)
 {
     var deviceStatus = "Online"
+    open val deviceType = "Unknown"
 
     constructor(): this(name= "Android Tv", category = "Enterprise")
     {
@@ -27,6 +28,8 @@ open class SmartDevice(val name: String, val category: String)
 
 class SmartTvDevice(deviceName: String, deviceCategory: String) :
     SmartDevice(name = deviceName, category = deviceCategory) {
+
+    override val deviceType = "Smart TV"
 
     var speakerVolume = 2
         set(value) {
@@ -68,8 +71,11 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
     }
 }
 
-class SmartLightDevice(deviceName: String, deviceCategory: String): SmartDevice(name = deviceName, category = deviceCategory)
+class SmartLightDevice(deviceName: String, deviceCategory: String):
+    SmartDevice(name = deviceName, category = deviceCategory)
 {
+    override val deviceType = "Smart Light"
+
     var brightnessLevel = 0
         set(value) {
             if (value in 0..100) {
