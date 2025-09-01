@@ -19,6 +19,11 @@ open class SmartDevice (val name: String, val category: String)
         println("Secondary constructor\nname -> $name category -> $category")
     }
 
+    fun printDeviceInfo()
+    {
+        println("Device name: $name, Category: $category, Type: $deviceType")
+    }
+
     open fun turnOn()
     {
         deviceStatus = "on"
@@ -44,6 +49,16 @@ class SmartTvDevice(deviceName: String, deviceCategory: String) :
         println("Speaker volume increased to $speakerVolume.")
     }
 
+    fun decreaseSpeakerVolume()
+    {
+        speakerVolume--
+        println("Speaker volume decreased to $speakerVolume.")
+    }
+    fun previousChannel()
+    {
+        channelNumber--
+        println("Channel number: $channelNumber")
+    }
     fun nextChannel()
     {
         channelNumber++
@@ -78,6 +93,11 @@ class SmartLightDevice(deviceName: String, deviceCategory: String):
         println("Brightness level increased to $brightnessLevel.")
     }
 
+    fun decreaseBrightnessLevel()
+    {
+        brightnessLevel--
+        println("Brightness level decreased to $brightnessLevel.")
+    }
     override fun turnOn()
     {
         super.turnOn()
@@ -141,6 +161,31 @@ class SmartHome(
         smartLightDevice.increaseBrightnessLevel()
     }
 
+    fun decreaseTvVolume()
+    {
+        smartTvDevice.decreaseSpeakerVolume()
+    }
+
+    fun changeTvChannelToPrevious()
+    {
+        smartTvDevice.previousChannel()
+    }
+
+    fun printSmartTvInfo()
+    {
+        smartTvDevice.printDeviceInfo()
+    }
+
+    fun printSmartLightInfo()
+    {
+        smartLightDevice.printDeviceInfo()
+    }
+
+    fun decreaseLightBrightness()
+    {
+        smartLightDevice.decreaseBrightnessLevel()
+    }
+
     fun turnOffAllDevice()
     {
         turnOffTv()
@@ -171,7 +216,10 @@ fun main()
 {
     var smartDevice: SmartDevice = SmartTvDevice("Android TV", "Enterprise")
     smartDevice.turnOn()
+    smartDevice.printDeviceInfo()
 
     smartDevice = SmartLightDevice("Google Light", "Utility")
     smartDevice.turnOn()
+    smartDevice.printDeviceInfo()
+    smartDevice.increaseBrightnessLevel()
 }
